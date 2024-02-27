@@ -2,15 +2,19 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About</title>
-</head>
-<h1>About</h1>
-<body>
-<p>This site generated a random password with user inputs for  length, and character type such as Uppercase, Numbers, and Special Characters. A new password will be generated with a refresh to the page.</p>
+    <head>
+        <meta charset="UTF-8">
+        <title>About</title>
+    </head>
 
-<p>This site was created by Erika Diaz for the purposes or python and test automation practice.</p>
-<a href="{% url 'home' %}" class="btn btn-info">Home</a>
-</body>
+    <div class="card">
+        <h5 class="card-header">About</h5>
+        <div class="card-body">
+            <p class="card-text">This site generated a random password with user inputs for  length, and character type such as Uppercase, Numbers, and Special Characters. A new password will be generated with a refresh to the page.</p>
+            <p>This site was created by Erika Diaz for the purposes or python and test automation practice.</p>
+            <a href="{% url 'home' %}" class="btn btn-info">Home</a>
+            <a href="https://github.com/ErikaItzelDiaz/password_generator-project" class="btn btn-info">GitHub</a>
+            <a href="https://www.linkedin.com/in/eerikaz/" class="btn btn-info">LinkedIn</a>
+      </div>
+    </div>
 </html>

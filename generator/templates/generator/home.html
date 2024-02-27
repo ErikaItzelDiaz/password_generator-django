@@ -2,40 +2,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+    </head>
 
-<div class="container text-center">
-    <h1> Password Generator </h1>
 
-    <form action = "{% url 'password' %}">
-        <select name = "length">
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12" selected="selected">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-        </select> Length
-        <br>
-        <input type="checkbox" name="uppercase"> Uppercase
-        <br>
-        <input type="checkbox" name="numbers"> Numbers
-        <br>
-        <input type="checkbox" name="special"> Special Characters
-        <br>
-        <input type="submit" value="Generate Password" class="btn btn-primary">
-    </form>
-
-    <body>
-    <br>
-    <a href="{% url 'about' %}" class="btn btn-info">About Page</a>
-    </body>
-</div>
-
+    <div class="card mx-auto text-center" style="width:400px">
+      <div class="card-header">Password Generator</div>
+      <div class="card-body">
+        <form action = "{% url 'password' %}">
+            <div class="form-check">
+                <select name = "length">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected="selected">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                </select> Character Length
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="uppercase" name="uppercase">
+                <label class="form-check-label" for="uppercase">Uppercase</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="numbers" name="numbers">
+                <label class="form-check-label" for="numbers">Numbers</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="special" name="special">
+                <label class="form-check-label" for="special">Special Characters</label>
+            </div>
+            <br>
+            <input type="submit" value="Generate Password" class="btn btn-outline-secondary">
+        </form>
+      </div>
+      <div class="card-footer">
+          <a href="{% url 'about' %}" class="btn btn-info">About Page</a>
+      </div>
+    </div>
 </html>
